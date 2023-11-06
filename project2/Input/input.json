@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "type": "customer",
+    "customer-requests": [
+      {
+        "customer_request_id": 1,
+        "interface": "deposit",
+        "money": 10
+      },
+      {
+        "customer_request_id": 2,
+        "interface": "withdraw",
+        "money": 10
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "customer",
+    "customer-requests": [
+      {
+        "customer_request_id": 3,
+        "interface": "deposit",
+        "money": 10
+      },
+      {
+        "customer_request_id": 4,
+        "interface": "withdraw",
+        "money": 10
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "customer",
+    "customer-requests": [
+      {
+        "customer_request_id": 5,
+        "interface": "deposit",
+        "money": 10
+      },
+      {
+        "customer_request_id": 6,
+        "interface": "withdraw",
+        "money": 10
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "type": "branch",
+    "balance": 400
+  },
+  {
+    "id": 2,
+    "type": "branch",
+    "balance": 400
+  },
+  {
+    "id": 3,
+    "type": "branch",
+    "balance": 400
+  }
+]

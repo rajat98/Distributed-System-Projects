@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package distributed_banking;
+
+message BankingOperationRequest {
+    int32 id = 1;
+    string type = 2;
+    repeated Event events = 3;
+}
+
+message BankingOperationResponse {
+    int32 id = 1;
+    repeated EventResult recv = 2;
+}
+
+message Event {
+    int32 id = 1;
+    string interface = 2;
+    int32 money = 3;
+}
+
+message EventResult {
+    string interface = 1;
+    string result = 2;
+    int32 balance = 3;
+}
+
+service BankingService {
+    rpc MsgDelivery (BankingOperationRequest) returns (BankingOperationResponse);
+}
