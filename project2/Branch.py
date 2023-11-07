@@ -265,7 +265,7 @@ def initialize_branch_servers(branch_id_list):
 
 def get_input_file_path():
     if len(sys.argv) != 2:
-        input_file_path = "./Input/input.json"
+        input_file_path = "./Input/input_10.json"
     else:
         input_file_path = sys.argv[1]
     return input_file_path

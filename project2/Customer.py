@@ -62,6 +62,7 @@ class Customer:
         self.increment_logical_clock()
         customer_event = self.append_customer_event_to_recvMsg(customer_request, id)
         customer_request["logical_clock"] = self.logical_clock
+        customer_request["customer_request_id"] = customer_request.pop("customer-request-id")
         response = banking_service_stub.MsgDelivery(
             distributed_banking_system_pb2.BankingOperationRequest(id=id, type="customer",
                                                                    customer_requests=[customer_request]))
@@ -74,7 +75,7 @@ class Customer:
 
     def append_customer_event_to_recvMsg(self, customer_request, customer_id):
         customer_event = {"id": customer_id,
-                          "customer_request_id": customer_request["customer_request_id"],
+                          "customer_request_id": customer_request["customer-request-id"],
                           "type": "customer",
                           "logical_clock": self.logical_clock,
                           "interface": customer_request["interface"],
@@ -221,7 +222,7 @@ def run_checker_scripts():
 if __name__ == '__main__':
     res = []
     if len(sys.argv) != 2:
-        input_file_path = "./Input/input.json"
+        input_file_path = "./Input/input_10.json"
     else:
         input_file_path = sys.argv[1]
 
