@@ -90,12 +90,6 @@ class Branch(distributed_banking_system_pb2_grpc.BankingServiceServicer):
                     response.append(withdraw_response)
                     replica_branch_responses.extend(propagate_withdraw_response)
 
-        # replica_branch_dict_responses = []
-        # for replica_branch_response in replica_branch_responses:
-        #     replica_branch_dict_responses.append(protobuf_to_dict(replica_branch_response))
-
-        # self.recvMsg.extend(replica_branch_dict_responses)
-        # print(replica_branch_responses)
         return replica_branch_responses
 
     def query(self, request, id, type):
@@ -174,9 +168,7 @@ class Branch(distributed_banking_system_pb2_grpc.BankingServiceServicer):
                                                                        customer_requests=[customer_request]))
             dict_response = protobuf_to_dict(replica_branch_response)
             replica_branch_responses.extend(dict_response["event_result"])
-            # if response.recv[0].result != "success":
-            #     print(f"Failed to replicate deposit to branch {self.stubList.index(stub) + 1}")
-            # replica_branch_responses.append(response)
+
         return replica_branch_responses
 
     def replicate_withdraw(self, customer_request):
@@ -199,9 +191,7 @@ class Branch(distributed_banking_system_pb2_grpc.BankingServiceServicer):
                                                                        customer_requests=[customer_request]))
             dict_response=protobuf_to_dict(replica_branch_response)
             replica_branch_responses.extend(dict_response["event_result"])
-            # if response.recv[0].result != "success":
-            #     print(f"Failed to replicate withdrawal to branch {self.stubList.index(stub) + 1}")
-            # replica_branch_responses.append(response)
+
         return replica_branch_responses
 
 
@@ -242,9 +232,6 @@ def initialize_branch_servers(branch_id_list):
             id = item["id"]
             type = item["type"]
             balance = item["balance"]
-            # print("ID:", item["id"])
-            # print("Type:", item["type"])
-            # print("Balance:", item["balance"])
 
             process = multiprocessing.Process(target=serve,
                                               args=(str(50050 + int(id)), id, balance, branch_id_list, result_queue))
