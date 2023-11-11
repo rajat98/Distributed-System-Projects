@@ -90,12 +90,12 @@ class Branch(distributed_banking_system_pb2_grpc.BankingServiceServicer):
                     response.append(withdraw_response)
                     replica_branch_responses.extend(propagate_withdraw_response)
 
-        replica_branch_dict_responses = []
+        # replica_branch_dict_responses = []
         # for replica_branch_response in replica_branch_responses:
         #     replica_branch_dict_responses.append(protobuf_to_dict(replica_branch_response))
 
-        self.recvMsg.extend(replica_branch_dict_responses)
-        print(replica_branch_responses)
+        # self.recvMsg.extend(replica_branch_dict_responses)
+        # print(replica_branch_responses)
         return replica_branch_responses
 
     def query(self, request, id, type):
