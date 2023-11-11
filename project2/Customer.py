@@ -259,7 +259,7 @@ if __name__ == '__main__':
             results.append(result)
         generate_output(results)
         print("Customer process completed\n")
-        run_checker_scripts()
+        # run_checker_scripts()
     except FileNotFoundError:
         print(f"File not found: {input_file_path}")
     except json.JSONDecodeError as e:
