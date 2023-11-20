@@ -1,0 +1,602 @@
+[
+    {
+        "id": 1,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 0,
+                "branch": 1
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 1
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 10,
+                "branch": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 10,
+                "branch": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 20,
+                "branch": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 20,
+                "branch": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 30,
+                "branch": 3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 30,
+                "branch": 4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 40,
+                "branch": 4
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 40,
+                "branch": 5
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 5
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 50,
+                "branch": 5
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 50,
+                "branch": 6
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 6
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 60,
+                "branch": 6
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 60,
+                "branch": 7
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 7
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 70,
+                "branch": 7
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 70,
+                "branch": 8
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 8
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 80,
+                "branch": 8
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 80,
+                "branch": 9
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 9
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 90,
+                "branch": 9
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 90,
+                "branch": 10
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "recv": [
+            {
+                "interface": "deposit",
+                "result": "success",
+                "branch": 10
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 100,
+                "branch": 10
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 100,
+                "branch": 1
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 1
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 90,
+                "branch": 1
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 90,
+                "branch": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 80,
+                "branch": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 80,
+                "branch": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 3
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 70,
+                "branch": 3
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 70,
+                "branch": 4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 4
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 60,
+                "branch": 4
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 60,
+                "branch": 5
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 5
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 50,
+                "branch": 5
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 50,
+                "branch": 6
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 6
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 40,
+                "branch": 6
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 40,
+                "branch": 7
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 7
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 30,
+                "branch": 7
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 30,
+                "branch": 8
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 8
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 20,
+                "branch": 8
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 20,
+                "branch": 9
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 9
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 10,
+                "branch": 9
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 10,
+                "branch": 10
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "recv": [
+            {
+                "interface": "withdraw",
+                "result": "success",
+                "branch": 10
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "recv": [
+            {
+                "interface": "query",
+                "balance": 0,
+                "branch": 10
+            }
+        ]
+    }
+]
