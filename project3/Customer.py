@@ -89,6 +89,25 @@ def start_customer_process(id, events):
     # output_file.write(dict_to_str(branch_response))
     output_file.close()
 
+def run_checker_scripts():
+    import subprocess
+
+    # Replace 'your-shell-command' with the actual shell command you want to run
+    shell_command = 'python3 ./Checker/checker.py ./Output/output.json'
+
+    # Run the shell command
+    result = subprocess.run(shell_command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+    # Check if the command was successful
+    if result.returncode == 0:
+        print("Command executed successfully")
+        print("Standard Output:")
+        print(result.stdout)
+    else:
+        print("Error executing the command")
+        print("Standard Error:")
+        print(result.stderr)
+
 
 if __name__ == '__main__':
     res = []
@@ -123,6 +142,7 @@ if __name__ == '__main__':
             # time.sleep(3)
         for process in processes:
             process.join()
+        run_checker_scripts()
         print("Customer process completed\n")
     except FileNotFoundError:
         print(f"File not found: {input_file_path}")
