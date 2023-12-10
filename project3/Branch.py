@@ -29,6 +29,7 @@ class Branch(distributed_banking_system_pb2_grpc.BankingServiceServicer):
         # iterate the processID of the branches
         self.branch_id_list = list()
         self.initialize_stubs()
+        self.lock = multiprocessing.Lock()
 
     def initialize_stubs(self):
         # Initialize gRPC stubs for communication with other branches
@@ -43,11 +44,12 @@ class Branch(distributed_banking_system_pb2_grpc.BankingServiceServicer):
     def MsgDelivery(self, request, context):
         type = request.type
         response = []
-        match type:
-            case "customer":
-                response = self.process_customer_events(request)
-            case "branch":
-                response = self.process_branch_events(request)
+        with self.lock:
+            match type:
+                case "customer":
+                    response = self.process_customer_events(request)
+                case "branch":
+                    response = self.process_branch_events(request)
 
         return distributed_banking_system_pb2.BankingOperationResponse(id=self.id, recv=response)
 
