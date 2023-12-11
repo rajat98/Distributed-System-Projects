@@ -183,9 +183,6 @@ def initialize_branch_servers(branch_id_list):
             id = item["id"]
             type = item["type"]
             balance = item["balance"]
-            # print("ID:", item["id"])
-            # print("Type:", item["type"])
-            # print("Balance:", item["balance"])
 
             process = multiprocessing.Process(target=serve,
                                               args=(str(50050 + int(id)), id, balance, branch_id_list, result_queue))

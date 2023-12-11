@@ -89,10 +89,9 @@ def start_customer_process(id, events):
     # output_file.write(dict_to_str(branch_response))
     output_file.close()
 
+
 def run_checker_scripts():
     import subprocess
-
-    # Replace 'your-shell-command' with the actual shell command you want to run
     shell_command = 'python3 ./Checker/checker.py ./Output/output.json'
 
     # Run the shell command
@@ -130,19 +129,14 @@ if __name__ == '__main__':
             id = item["id"]
             type = item["type"]
             events = item["events"]
-            # print("ID:", item["id"])
-            # print("Type:", item["type"])
-            # print("Events:", item["events"])
             process = multiprocessing.Process(target=start_customer_process,
                                               args=(id, events))
             processes.append(process)
             process.start()
 
-            # sleep for 3 seconds for event propagation
-            # time.sleep(3)
         for process in processes:
             process.join()
-        run_checker_scripts()
+        # run_checker_scripts()
         print("Customer process completed\n")
     except FileNotFoundError:
         print(f"File not found: {input_file_path}")
